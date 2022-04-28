@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".25"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".5"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.76" />
+
+        <Button
+        android:id="@+id/btn01"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="01"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn02"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias=".7"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"/>
+
+    <Button
+        android:id="@+id/btn02"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="02"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn01"
+        app:layout_constraintEnd_toStartOf="@+id/btn03"
+        app:layout_constraintVertical_bias=".7"/>
+
+    <Button
+        android:id="@+id/btn03"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="03"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btn02"
+        app:layout_constraintVertical_bias=".7"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
